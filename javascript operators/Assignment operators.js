@@ -22,9 +22,9 @@ const fun = false;
 let sep = "\n";
 let x = 10;
 if( fun === true){
-    // console.log(sep);
+    console.log(sep);
     x +=20;
-    console.log(`\n1.Addition assignment`+' \t\t\t--> '+x);
+    console.log(`1.Addition assignment`+' \t\t\t--> '+x);
     x -=2;
     console.log(`\n2.Subtraction assignment`+' \t\t--> '+x);
     x *=5;
