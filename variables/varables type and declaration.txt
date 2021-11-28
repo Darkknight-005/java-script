@@ -1,0 +1,79 @@
+there are three types of variable in javscript
+
+1. var 
+
+where we can use car var keyword declaration global scope or functional / locally scoped.
+
+what it means if var is declare outside of any function it has global reach or it can be throughout the script.,
+
+but when you decalre a variable inside a function it's reach wil reduce to inside that function.
+This means that it can be accessed within that function.
+
+                            ****************************************
+                            
+                            var hello = '-->    hello';                         // this has global scope
+                            
+                            function myFunction(){
+                                var greet = '-->    good morning';              // this line has function scope 
+                                console.log(greet);
+                            }
+                            console.log(hello);
+                            
+                            console.log(myFunction());
+                            
+                            // console.log(n_umbers);
+                            
+                            ****************************************
+
+var can be re-decalre or updated within the scope means ( global scope / function scope ).
+problem with var is that when you declare a varibale with var and for got you have that var it will redeclare without knowing you that there is a another var of that type 
+there it comes `let` and `const`.
+when you re-decalre that type of var it will tell you you have that type of variable and you can not redeclare it
+
+2. let
+
+let has scope inside an function or statement because if 
+you update that variable again in same block {} it will never give error or redeclare in another block {} also
+but redeclare in same block {} is not allowed get through error  
+
+here is an example what i want to say:
+example:
+                                let hello = '-->    hello';             // this is in global reach 
+                                let hello = '-->   hi'              // this is redeclaration and through error. 
+                                function myFunction(){
+                                    let greet = '-->    good morning';
+                                    let greet = '-->    good afternoon';    // this will also through error
+                                    console.log(greet);
+                                }
+                                console.log(hello);
+                                console.log(myFunction());
+                                // comment out the below line and see the code will get error
+                                // console.log(n_umbers);
+
+how we update in block: - 
+                                let hello = '-->    hello';
+                                hello = '-->    hi'                 // this will not through error
+                                function myFunction(){
+                                    let greet = '-->    good morning';
+                                    greet = '-->    good afternoon';        // this will not through error
+                                    console.log(greet);
+                                }
+                                console.log(hello);
+                                console.log(myFunction());
+                                console.log(newFunction());
+
+
+3. const
+const have block scope same as let., but we can say
+it is some like let but can not be update or redeclare in same block
+
+                                const hello = '-->    hello';
+                                hello = '-->    hi'                 // this will through error
+                                function myFunction(){
+                                    const greet = '-->    good morning';
+                                    greet = '-->    good afternoon';        // this will through error
+                                    console.log(greet);
+                                }
+                                console.log(hello);
+                                console.log(myFunction());
+                                console.log(newFunction());
