@@ -17,7 +17,16 @@ Logical AND assignment 	            x &&= f() 	                        x && (x =
 Logical OR assignment 	            x ||= f() 	                        x || (x = y)
 Logical nullish assignment          x ??=f()                            x ?? (x = y)
 */
-
+/* 
+10. Equation for left shift operators.
+    -->     x * 2**y
+            Means  x is a number and y is the power of 2 or (super-script).
+            x is multiplied to 2 with power y.
+            
+11. Equation for right shift operators.
+    -->     x/2**y
+            Means x is divided by 2 with power y
+*/
 const fun = false;
 let sep = "\n";
 let x = 10;
