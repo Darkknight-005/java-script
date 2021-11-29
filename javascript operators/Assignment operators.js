@@ -25,9 +25,7 @@ Logical nullish assignment          x ??=f()                            x ?? (x 
             
 11. Equation for right shift operators.
     -->     x/2**y
-            Means x is divided by 2 with power y
-
-
+            Means x is divided by 2 with power y.
 */
 
 const fun = false;
