@@ -93,7 +93,6 @@ while(Operator === true){
             };
             break ;
         };
-let operator = true;
 while(Operator === false){
     
             /*This while section consist only exclamation_Equal, exclamation_strict, greater_than_or_equal, less_than_or_equal
