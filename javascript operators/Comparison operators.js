@@ -50,7 +50,7 @@ while(Operator === true){
             greater_than = common_line +'greater than and this is greater',
             less_than = common_line +'less than and this is lesser';
         
-            let common_line1 = 'This is string condition with same integer',
+            let common_line1 = 'This is string condition with same integer with',
             d_equal1 = common_line1 +'double equal and this is equal',
             s_equal1 = common_line1 +'triple equal and this is strict equal',
             greater_than1 = common_line1 +'greater than and this is greater',
@@ -62,51 +62,38 @@ while(Operator === true){
             // change the condition int == 4 to int == 5
         
             if (int == 4){
-                console.log(d_equal)
+                console.log("1. "+d_equal)
             }
             // change the condition int == "4" to int == "5" 
             
             else if(int == "4"){
-                console.log(d_equal1)
+                console.log("2. "+d_equal1)
             }
             // strict equal operator
             // change the condition int === 4 to int === 5 
         
             else if (int === 4){
-                console.log(s_equal)
-            }
-            // change the condition int === "4" to int === "5" 
-            
-            else if(int === "4"){
-                console.log(s_equal1)
+                console.log("3. "+s_equal)
             }
             // greater than operator
             // change the condition int > 5 to int >  4
         
             else if (int > 5){
-                console.log(greater_than)
-            }
-            // change the condition int > "5" to int > "4"
-            
-            else if(int > "5"){
-                console.log(greater_than1)
+                console.log("4. "+greater_than)
             }
             // Less than operator
             // change the condition int < 5 to int <  6  
             
             else if (int < 4){
-                console.log(less_than)
-            }
-            // change the condition int < "5" to int < "6"
+                console.log("5. "+less_than)
+            }            
             
-            else if(int < "4"){
-                console.log(less_than1)
-            }
             else{
                 console.log('Wrong or nothing change: \n\t\t You have done something wrong that\'s why you seeing this message.')
             };
             break ;
         };
+let operator = true;
 while(Operator === false){
     
             /*This while section consist only exclamation_Equal, exclamation_strict, greater_than_or_equal, less_than_or_equal
@@ -118,63 +105,54 @@ while(Operator === false){
                 Here "5" is in string form.
             */
 
-            let int = 4,
+            let common_line = 'This is integer condition with ',
+            e_equal = common_line +'exclamation equal and this is not equal',
+            e_d_equal = common_line +' exclamation double equal and this is strict not equal.',
+            greater_than_e = common_line +'greater than or equal and this is greater or equal.',
+            less_than_e = common_line +'less than or equal and this is lesser or equal.';
 
-            common_line = 'This is integer condition with ',
-            d_equal = common_line +'exclamation equal and this is equal',
-            s_equal = common_line +' exclamation double equal and this is strict equal.',
-            greater_than = common_line +'greater than or equal and this is greater or equal.',
-            less_than = common_line +'less than or equal and this is lesser or equal.';
+            let common_line1 = 'This is string condition with same integer with ',
+            e_equal1 = common_line1 +'exclamation equal and this is not equal.',
+            e_d_equal1 = common_line1 +'exclamation double equal and this is not equal.',
+            greater_than_e1 = common_line1 +'greater than or equal and this is greater or equal.',
+            less_than_e1 = common_line1 +'less than or equal and this is lesser or equal.';
 
-            let common_line1 = 'This is string condition with same integer.',
-            d_equal1 = common_line1 +'double equal and this is equal.',
-            s_equal1 = common_line1 +'triple equal and this is equal.',
-            greater_than1 = common_line1 +'greater than or equal and this is greater or equal.',
-            less_than1 = common_line1 +'less than or equal and this is lesser or equal.';
 
+            let int = 4;
             // equal operator
             // change the condition int == 4 to int == 5
 
             if (int != 4){
-                console.log(d_equal)
+                console.log("1. "+e_equal)
             }
-            // change the condition int == "4" to int == "5" 
+            // change the condition int ==
 
-            else if(int != "5"){
-                console.log(d_equal1)
+            else if(int != "4"){
+                console.log("2. "+e_equal1)
             }
             // strict equal operator
-            // change the condition int === 4 to int === 5 
+            // change the condition int === 4 to int === "4" 
 
             else if (int !== 4){
-                console.log(s_equal)
+                console.log("3. "+e_d_equal)
             }
-            // change the condition int === "4" to int === "5" 
+            // change the condition int === 4 to int === "4" 
         
-            else if(int !== "4"){
-                console.log(s_equal1)
+            else if(int !== 4){
+                console.log("4. "+e_d_equal1)
             }
             // greater than or equal operator
+            
             // change the condition int >= 5 to int >= 4
-        
-            else if (int >= 5){
-                console.log(greater_than)
-            }
-            // change the condition int >= "5" to int >= "4"
 
-            else if(int >= "5"){
-                console.log(greater_than1)
+            else if(int >= 5){
+                console.log("5. "+greater_than_e1)
             }
             // Less than or equal operator
-            // change the condition int <= 5 to int <=  4  
+            // change the condition int <= 3 to int <=  4  
 
-            else if (int <= 4){
-                console.log(less_than)
-            }
-            // change the condition int <= "5" to int <= "4"
-
-            else if(int <= "4"){
-                console.log(less_than1)
+            else if (int <= 3){
+                console.log("6. "+less_than_e)
             }
             else{
                 console.log('Wrong or nothing change: \n\t\t You have done something wrong that\'s why you seeing this message.')
