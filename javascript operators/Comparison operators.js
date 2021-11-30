@@ -136,11 +136,6 @@ while(Operator === false){
             else if (int !== 4){
                 console.log("3. "+e_d_equal)
             }
-            // change the condition int === 4 to int === "4" 
-        
-            else if(int !== 4){
-                console.log("4. "+e_d_equal1)
-            }
             // greater than or equal operator
             
             // change the condition int >= 5 to int >= 4
@@ -160,4 +155,4 @@ while(Operator === false){
             break ;
         };
 
-/*note: (===) and (>) (<) (>=) (<=)with string and number. create blunder's.*/
+/*note: (===) and (>) (<) (>=) (<=)with string and number. create blunder's. So try in seprate sample code and then use it in main file.*/
