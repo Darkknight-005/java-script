@@ -103,7 +103,7 @@ while(Operator === true){
                 console.log(less_than1)
             }
             else{
-                console.log('You have done something wrong that\'s why you seeing this message.')
+                console.log('Wrong or nothing change: \n\t\t You have done something wrong that\'s why you seeing this message.')
             };
             break ;
         };
@@ -177,7 +177,7 @@ while(Operator === false){
                 console.log(less_than1)
             }
             else{
-                console.log('You have done something wrong that\'s why you seeing this message.')
+                console.log('Wrong or nothing change: \n\t\t You have done something wrong that\'s why you seeing this message.')
             };
             break ;
         };
