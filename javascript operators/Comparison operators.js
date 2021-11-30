@@ -159,3 +159,5 @@ while(Operator === false){
             };
             break ;
         };
+
+/*note: (===) and (>) (<) (>=) (<=)with string and number. create blunder's.*/
