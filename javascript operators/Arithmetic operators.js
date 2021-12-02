@@ -23,7 +23,9 @@
 
 */
 
-var x = 3 ;
+// change var x  between these units 3, 12 and "3".
+// for initial it set to 0
+var x = 0;  
     if(x === 12){
         let y = x % 5;
         console.log("-->"+y+" This is the remainder of 12 % 5")
@@ -33,7 +35,7 @@ var x = 3 ;
         y = ++x;
         console.log("-->"+y+" This is the increment of x = 2 to x = 3 because aobve line updated the x.")
         y = -x;
-        console.log("-->"+y+" This is the unary negation x = 2 to x = 3 because aobve line updated the x.")
+        console.log("-->"+y+" This is the unary negation x = 3 to x = -3 because aobve line updated the x.")
         // negation means opposite of something.
     }else if(x === "3"){
         // comment let y = +x; this line out and see you will recive error
@@ -42,4 +44,4 @@ var x = 3 ;
         console.log("-->"+y+" This is the unary plus this will convert string number to numerical from.")
         y **= x;
         console.log("-->"+y+" This is the result 3**3 means 3 *3*3 is 27 ")
-    }else{ console.log('please follow the comment end instruction.')}
+    }else{ console.log('\n-->\tplease follow the commented instruction.\n')}
