@@ -25,9 +25,10 @@ make sure it use only right hand operand
 and if you want to "run a statement" then set the condition to "false" the operator will convert it "true" or vise versa. 
  */
 let x = [0,1]
+/*by default the ternary conditions are set to `false` and try to solve it by keeping in mind above summary  */
 for(i = 1 ; i < 2; i++){
-    let y = (false && (i > 2)) ? x[0]:x[1] ;
-    let z = ((x[1] < 0)  || (i > 2)) ? x[0]:x[1];
-    let w = (!(x[0] < i)) ? x[0]:x[1];
+    let y = (false && (i > 2)) ? "true":"false" ;
+    let z = ((x[1] < 0)  || (i > 2)) ? "true":"false";
+    let w = (!(x[0] < i)) ? "true":"false";
     console.log("1->"+y+"\n2->"+z+"\n3->"+w)
 }
