@@ -16,3 +16,5 @@ this is only operator which takes 3 operands as follow
 let x = "welcome", y = "welcome";   // change the any one variable to any other word and see what happend
 const z = (x === y) ? "yes":"no"
 console.log(z)
+
+// this is also use as alternative of if statement
