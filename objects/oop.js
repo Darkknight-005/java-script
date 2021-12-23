@@ -33,7 +33,7 @@ function Person(first, last, age, gender, interests) {
   console.log(person1.interests[1]);
  person1.bio();
 
-//  this is object constructer given below
+//  this is "Object()" constructer given below
 
 let person2 = new Object();
 person2.name = 'rakesh';
@@ -44,9 +44,14 @@ person2.bio = function(){
 };
 person2.bio();
 
-let person3 = object.create(person2);
+// this is "create()" method for protyping for new object with same "object property" and "property value" after that you can edit as you want. 
+
+let person3 = Object.create(person2);
 person3.name = 'mk gandhi';
 person3.age = 50;
 person3.gender = 'male';
 
 person3.bio()
+
+
+// note: make sure every time you type object use sentence case means "Object" not "object" other wise it will through error. personal experience while writting this code ---> Lol.
