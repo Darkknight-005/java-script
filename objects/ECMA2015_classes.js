@@ -36,6 +36,8 @@ The extends keyword can be used to subclass custom classes as well as built-in o
  in our case:
  basic constructor is:  class person{}
  copy or prototype constructor: class teacher extends person{}
+
+
  
  */
 
