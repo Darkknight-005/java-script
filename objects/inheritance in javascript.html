@@ -1,0 +1,176 @@
+<!-- these code are from https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Inheritance
+when i understand what they are taking about i will update it with my code 
+and some some what i understanded are written at last  
+
+note: this is old school method of creating inheritence but we have
+ECMAscript 2015 "classes" which work similar to the below method but more simpler way
+check it in ECMA2015_classes.js file-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+      <label for="jscode">Enter code:</label>
+      <input type="text" id="jscode">
+      <button>Submit code</button>
+    </div>
+
+    <p></p>
+  
+
+    <script>
+      const input = document.querySelector('input');
+      const btn = document.querySelector('button');
+      const para = document.querySelector('p');
+
+      btn.onclick = function() {
+        const code = input.value;
+        para.textContent = eval(code);
+      }
+
+      function Person(first, last, age, gender, interests) {
+        this.name = {
+          first,
+          last
+        };
+        this.age = age;
+        this.gender = gender;
+        this.interests = interests;
+      };
+
+      Person.prototype.bio = function() {
+        // First define a string, and make it equal to the part of
+        // the bio that we know will always be the same.
+        let string = this.name.first + ' ' + this.name.last + ' is ' + this.age + ' years old. ';
+        // define a variable that will contain the pronoun part of
+        // the second sentence
+        let pronoun;
+
+        // check what the value of gender is, and set pronoun
+        // to an appropriate value in each case
+        if(this.gender === 'male' || this.gender === 'Male' || this.gender === 'm' || this.gender === 'M') {
+          pronoun = 'He likes ';
+        } else if(this.gender === 'female' || this.gender === 'Female' || this.gender === 'f' || this.gender === 'F') {
+          pronoun = 'She likes ';
+        } else {
+          pronoun = 'They like ';
+        }
+
+        // add the pronoun string on to the end of the main string
+        string += pronoun;
+
+        // use another conditional to structure the last part of the
+        // second sentence depending on whether the number of interests
+        // is 1, 2, or 3
+        if(this.interests.length === 1) {
+          string += this.interests[0] + '.';
+        } else if(this.interests.length === 2) {
+          string += this.interests[0] + ' and ' + this.interests[1] + '.';
+        } else {
+          // if there are more than 2 interests, we loop through them
+          // all, adding each one to the main string followed by a comma,
+          // except for the last one, which needs an and & a full stop
+          for(let i = 0; i < this.interests.length; i++) {
+            if(i === this.interests.length - 1) {
+              string += 'and ' + this.interests[i] + '.';
+            } else {
+              string += this.interests[i] + ', ';
+            }
+          }
+        }
+
+        // finally, with the string built, we alert() it
+        alert(string);
+      };
+
+      Person.prototype.greeting = function() {
+        alert('Hi! I\'m ' + this.name.first + '.');
+      };
+
+      Person.prototype.farewell = function() {
+        alert(this.name.first + ' has left the building. Bye for now!');
+      }
+
+      let person1 = new Person('Tammi', 'Smith', 17, 'female', ['music', 'skiing', 'kickboxing']);
+
+      function Teacher(first, last, age, gender, interests, subject) {
+        Person.call(this, first, last, age, gender, interests);
+
+        this.subject = subject;
+      }
+
+      Teacher.prototype = Object.create(Person.prototype);
+      Object.defineProperty(Teacher.prototype, 'constructor', { 
+         value: Teacher, 
+         enumerable: false, // so that it does not appear in 'for in' loop
+         writable: true 
+      });
+
+      Teacher.prototype.greeting = function() {
+        let prefix;
+
+        if(this.gender === 'male' || this.gender === 'Male' || this.gender === 'm' || this.gender === 'M') {
+          prefix = 'Mr.';
+        } else if(this.gender === 'female' || this.gender === 'Female' || this.gender === 'f' || this.gender === 'F') {
+          prefix = 'Mrs.';
+        } else {
+          prefix = 'Mx.';
+        }
+
+        alert('Hello. My name is ' + prefix + ' ' + this.name.last + ', and I teach ' + this.subject + '.');
+      };
+
+      let teacher1 = new Teacher('Dave', 'Griffiths', 31, 'male', ['football', 'cookery'], 'mathematics');
+    </script>
+</body>
+</html>
+
+
+<!-- ************************* what i understaned **************************** -->
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        console.log('inheritance in javascript');
+
+        let obj = {
+            name:{
+            first:'please Enter your first name !',
+            last:'please Enter your last name !',
+            }
+        }
+    // this function test() is a constructor or you can say a prototype which create object on the basises of this constructor. 
+        function test(name,age,gender,interest){
+            this.name = name ;
+            this.age = age;
+            this.gender = gender;
+            this.interest = interest;
+        }
+
+    // this is the way of adding new properties in constructor or prototyper
+        test.prototype.bio =        // this "test.prototype" add the "bio" property which have function as value in it. 
+        function(){
+            console.log(`Your name is:- ${this.name} \nYour age is:- ${this.age} \nYour gender is:- ${this.gender}`);
+        }
+        
+    // this line will create an object name rahul on the basises of the "function test()"  constructor by the given parameter. 
+        let rahul = new test('rahul',22,'male','tv');
+
+    </script>
+</body>
+</html> -->
